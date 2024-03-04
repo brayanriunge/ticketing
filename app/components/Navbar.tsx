@@ -45,12 +45,12 @@ export default function Navbar() {
                     <a className="text-red-800 hover:text-red-600">Home</a>
                   </Link>
                   <Link legacyBehavior href={"/assessment"}>
-                    <a className="text-red-800 hover:text-red-600">
-                      Assessment
-                    </a>
+                    <a className="text-red-800 hover:text-red-600">Tickets</a>
                   </Link>
                   <Link legacyBehavior href="/articles">
-                    <a className="text-red-800 hover:text-red-600">Articles</a>
+                    <a className="text-red-800 hover:text-red-600">
+                      Testimonies
+                    </a>
                   </Link>
 
                   <Link legacyBehavior href="/community">
