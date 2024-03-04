@@ -1,14 +1,16 @@
+"use client";
 import useMediaQuery from "@/app/hooks/useMediaQuery";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import Logo from "@/public/Logo.jpeg";
+import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
+import Logo from "@/public/ticket.jpeg";
 import { HiOutlineX } from "react-icons/hi";
 import { HiBars3 } from "react-icons/hi2";
 
 export default function Navbar() {
   const router = useRouter();
+  const pathName = usePathname();
   const flexStyles = "flex items-center justify-between ";
   const isAboveMediaScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
@@ -16,7 +18,7 @@ export default function Navbar() {
   return (
     <nav>
       <div
-        className={`${flexStyles} w-full top-0 z-30 fixed py-2  bg-primary-gray-200 shadow`}
+        className={`${flexStyles} w-full top-0 z-30 fixed py-2  bg-purple-200 shadow`}
       >
         <div className={`${flexStyles} mx-auto w-5/6`}>
           <div className={`${flexStyles} w-full gap-10`}>
@@ -40,58 +42,22 @@ export default function Navbar() {
                   className={`${flexStyles} text-sm text-primary-gray-500  gap-8`}
                 >
                   <Link legacyBehavior href={"/"}>
-                    <a
-                      className={`${
-                        router.pathname === "/"
-                          ? "text-red-800"
-                          : "text-gray-20"
-                      } hover:text-red-600`}
-                    >
-                      Home
-                    </a>
+                    <a className="text-red-800 hover:text-red-600">Home</a>
                   </Link>
                   <Link legacyBehavior href={"/assessment"}>
-                    <a
-                      className={`${
-                        router.pathname === "/assessment"
-                          ? "text-red-800"
-                          : "text-gray-20"
-                      } hover:text-red-600`}
-                    >
+                    <a className="text-red-800 hover:text-red-600">
                       Assessment
                     </a>
                   </Link>
                   <Link legacyBehavior href="/articles">
-                    <a
-                      className={`${
-                        router.pathname === "/articles"
-                          ? "text-red-800"
-                          : "text-gray-20"
-                      } hover:text-red-600`}
-                    >
-                      Articles
-                    </a>
+                    <a className="text-red-800 hover:text-red-600">Articles</a>
                   </Link>
 
                   <Link legacyBehavior href="/community">
-                    <a
-                      className={`${
-                        router.pathname === "/community"
-                          ? "text-red-800"
-                          : "text-gray-20"
-                      } hover:text-red-600`}
-                    >
-                      Community
-                    </a>
+                    <a className="text-red-800 hover:text-red-600">Community</a>
                   </Link>
                   <Link legacyBehavior href="/#contactus">
-                    <a
-                      className={`${
-                        router.pathname === "/#contactus"
-                          ? "text-red-800"
-                          : "text-gray-20"
-                      } hover:text-red-600`}
-                    >
+                    <a className="text-red-800 hover:text-red-600">
                       Contact Us
                     </a>
                   </Link>
@@ -102,8 +68,6 @@ export default function Navbar() {
                  <p>Welcome {data.user.name}</p>
                 </>
                )} */}
-
-                <NavbarX isLoggedIn={isLoggedIn} onSignOut={handleSignOut} />
               </div>
             ) : (
               <button
@@ -126,49 +90,19 @@ export default function Navbar() {
                 {/**menu items */}
                 <div className=" flex flex-col gap-10 items-center text-justify text-2xl ">
                   <Link legacyBehavior href={"/"}>
-                    <a
-                      className={`${
-                        router.pathname === "/"
-                          ? "text-red-800"
-                          : "text-gray-20"
-                      } hover:text-red-600`}
-                    >
-                      Home
-                    </a>
+                    <a className="text-red-800 hover:text-red-600">Home</a>
                   </Link>
                   <Link legacyBehavior href={"/assessment"}>
-                    <a
-                      className={`${
-                        router.pathname === "/assessment"
-                          ? "text-red-800"
-                          : "text-gray-20"
-                      } hover:text-red-600`}
-                    >
+                    <a className="text-red-800 hover:text-red-600">
                       Assessment
                     </a>
                   </Link>
                   <Link legacyBehavior href={"/articles"}>
-                    <a
-                      className={`${
-                        router.pathname === "/articles"
-                          ? "text-red-800"
-                          : "text-gray-20"
-                      } hover:text-red-600`}
-                    >
-                      Articles
-                    </a>
+                    <a className="text-red-800 hover:text-red-600">Articles</a>
                   </Link>
                   <Link legacyBehavior href={"/community"}>
-                    <a
-                      className={`${
-                        router.pathname === "/community"
-                          ? "text-red-800"
-                          : "text-gray-20"
-                      } hover:text-red-600`}
-                    ></a>
+                    <a className="text-red-800 hover:text-red-600"></a>
                   </Link>
-
-                  <NavbarX isLoggedIn={isLoggedIn} onSignOut={handleSignOut} />
                 </div>
               </div>
             )}
