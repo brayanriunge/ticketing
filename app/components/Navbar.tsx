@@ -54,7 +54,7 @@ export default function Navbar() {
                   </Link>
 
                   <Link legacyBehavior href="/community">
-                    <a className="text-red-800 hover:text-red-600">Community</a>
+                    <a className="text-red-800 hover:text-red-600">Dashboard</a>
                   </Link>
                   <Link legacyBehavior href="/#contactus">
                     <a className="text-red-800 hover:text-red-600">
@@ -94,11 +94,11 @@ export default function Navbar() {
                   </Link>
                   <Link legacyBehavior href={"/assessment"}>
                     <a className="text-red-800 hover:text-red-600">
-                      Assessment
+                      Testimonies
                     </a>
                   </Link>
                   <Link legacyBehavior href={"/articles"}>
-                    <a className="text-red-800 hover:text-red-600">Articles</a>
+                    <a className="text-red-800 hover:text-red-600">Dashboard</a>
                   </Link>
                   <Link legacyBehavior href={"/community"}>
                     <a className="text-red-800 hover:text-red-600"></a>
