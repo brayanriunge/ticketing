@@ -1,3 +1,7 @@
 export default function Dashboard() {
-  return <form action=""></form>;
+  return (
+    <form action="">
+      <div></div>
+    </form>
+  );
 }
