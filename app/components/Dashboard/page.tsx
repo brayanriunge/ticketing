@@ -15,7 +15,8 @@ export default function Dashboard() {
   } = useForm<formValues>();
   return (
     <form action="">
-      <div>
+      <div className="gap-16  md:h-full pb-4"></div>
+      <div className="md:flex w-5/6 mx-auto md:h-5/6 items-center justify-between">
         <div>
           <input
             type="name"
