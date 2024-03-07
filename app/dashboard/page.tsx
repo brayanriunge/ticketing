@@ -16,6 +16,9 @@ export default function Dashboard() {
   } = useForm<formValues>();
   return (
     <section className="gap-16  md:h-full pb-4">
+      <div className="flex items-center justify-between mt-12 px-10">
+        <h1 className="font-bold text-xl ">Add Ticket</h1>
+      </div>
       <form action="">
         <div className="md:flex flex-col w-5/6 mx-auto md:h-5/6 items-center justify-between p-5 m-5 gap-8">
           <div className=" md:flex border-2 rounded-xl border-orange-300 items-center ">
