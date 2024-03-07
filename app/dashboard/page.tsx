@@ -24,33 +24,33 @@ export default function Dashboard() {
               id="name"
               placeholder="Ticket Name"
               required
-              className="rounded-xl px-5 py-5 border-2 border-orange-600 "
+              className="rounded-xl px-5 py-5 focus:outline-none border-none "
               {...register("name")}
             />
             {errors.name?.message && (
               <div className="text-red-500 text-sm">{errors.name.message}</div>
             )}
           </div>
-          <div>
+          <div className=" md:flex border-2 rounded-xl border-orange-300 items-center ">
             <input
               type="text"
               id="venue"
               placeholder="Venue"
               required
-              className="rounded-xl px-5 py-5 "
+              className="rounded-xl px-5 py-5 focus:outline-none border-none "
               {...register("venue")}
             />
             {errors.venue?.message && (
               <div className="text-red-500 text-sm">{errors.venue.message}</div>
             )}
           </div>
-          <div>
+          <div className=" md:flex border-2 rounded-xl border-orange-300 items-center ">
             <input
               type="text"
               id="description"
               placeholder="Description"
               required
-              className="rounded-xl px-5 py-5 "
+              className="rounded-xl px-5 py-5 focus:outline-none border-none"
               {...register("description")}
             />
             {errors.description?.message && (
@@ -59,26 +59,26 @@ export default function Dashboard() {
               </div>
             )}
           </div>
-          <div>
+          <div className=" md:flex border-2 rounded-xl border-orange-300 items-center ">
             <input
               type="number"
               id="price"
               placeholder="Price"
               required
               {...register("price")}
-              className="rounded-xl px-5 py-5 "
+              className="rounded-xl px-5 py-5 focus:outline-none border-none"
             />
             {errors.price?.message && (
               <div className="text-red-500 text-sm">{errors.price.message}</div>
             )}
           </div>
-          <div>
+          <div className=" md:flex border-2 rounded-xl border-orange-300 items-center ">
             <input
               type="number"
               id="begin"
               placeholder="Starts at what time"
               required
-              className="rounded-xl px-5 py-5 "
+              className="rounded-xl px-5 py-5 focus:outline-none border-none "
               {...register("begin")}
             />
             {errors.begin?.message && (
