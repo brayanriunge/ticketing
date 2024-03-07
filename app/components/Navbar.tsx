@@ -44,16 +44,16 @@ export default function Navbar() {
                   <Link legacyBehavior href={"/"}>
                     <a className="text-red-800 hover:text-red-600">Home</a>
                   </Link>
-                  <Link legacyBehavior href={"/assessment"}>
+                  <Link legacyBehavior href={"/"}>
                     <a className="text-red-800 hover:text-red-600">Tickets</a>
                   </Link>
-                  <Link legacyBehavior href="/articles">
+                  <Link legacyBehavior href="/">
                     <a className="text-red-800 hover:text-red-600">
                       Testimonies
                     </a>
                   </Link>
 
-                  <Link legacyBehavior href="/community">
+                  <Link legacyBehavior href="/dashboard">
                     <a className="text-red-800 hover:text-red-600">Dashboard</a>
                   </Link>
                   <Link legacyBehavior href="/#contactus">
