@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 type formValues = {
   name: string;
@@ -9,11 +10,40 @@ type formValues = {
 };
 
 export default function Dashboard() {
+  const [selectedImage, setSelectedImage] = useState("");
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
+
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm<formValues>();
+
+  // event handler for file input change
+  const handleFileUploadChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    if (!event.target.files) return;
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedImage(URL.createObjectURL(file));
+      setSelectedFile(file);
+    }
+  };
+
+  //event handler for form submission
+  const handleFormSubmission = async (data: formValues) => {
+    const { begin, description, name, price, venue } = data;
+    const ticket = {
+      begin,
+      description,
+      name,
+      price,
+      venue,
+    };
+  };
+
   return (
     <section className="gap-16 bg-indigo-200 md:h-full pb-12 min-h-full ">
       <div className="flex items-center justify-between py-4 px-10">
