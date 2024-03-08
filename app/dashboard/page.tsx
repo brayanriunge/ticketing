@@ -35,19 +35,18 @@ export default function Dashboard() {
   //event handler for form submission
   const handleFormSubmission = async (data: formValues) => {
     const { begin, description, name, price, venue } = data;
-    const tickets = {
+    const ticket = {
       begin,
       description,
       name,
       price,
       venue,
     };
+    //creating formData to send to the server
+    const formData = new FormData();
+    formData.append("ticket", JSON.stringify(ticket));
+    if (selectedImage) formData.append("image", selectedImage);
   };
-
-  //creating formData to send to the server
-  const formData = new FormData();
-  formData.append("tickets", JSON.stringify(tickets));
-  if (selectedImage) formData.append("image", selectedImage);
 
   return (
     <section className="gap-16 bg-indigo-200 md:h-full pb-12 min-h-full ">
