@@ -15,8 +15,8 @@ export default function Dashboard() {
     handleSubmit,
   } = useForm<formValues>();
   return (
-    <section className="gap-16  md:h-full pb-4">
-      <div className="flex items-center justify-between mt-12 px-10">
+    <section className="gap-16 bg-indigo-200 md:h-full pb-12 min-h-full ">
+      <div className="flex items-center justify-between py-4 px-10">
         <h1 className="font-bold text-xl ">Add Ticket</h1>
       </div>
       <form action="">
