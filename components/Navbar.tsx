@@ -48,9 +48,7 @@ export default function Navbar() {
                     <a className="text-red-800 hover:text-red-600">Tickets</a>
                   </Link>
                   <Link legacyBehavior href="/">
-                    <a className="text-red-800 hover:text-red-600">
-                      Testimonies
-                    </a>
+                    <a className=" hover:text-red-600">Testimonies</a>
                   </Link>
 
                   <Link legacyBehavior href="/dashboard">
